@@ -1,0 +1,16 @@
+.bgImage {
+  background-image: url("../kivu-image/bg-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-origin: border-box;
+}
+.aboutBg {
+  background-image: url("../kivu-image/about-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-origin: border-box;
+}
