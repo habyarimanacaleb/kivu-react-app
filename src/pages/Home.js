@@ -67,8 +67,9 @@ const Home = () => {
         <h1 className="headings text-bold-600 text-center text-5xl my-10">
           Our Services/Tours
         </h1>
-        <div className="service-container mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="service-container mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
           {/* Cards will be dynamically inserted here */}
+          Not yet Available...
         </div>
       </section>
       <section id="mtb-tours" className="py-10 bg-gray-100">
