@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for menu
+import DropdownMenu from "./dropdawn/DropdownMenu";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,30 +52,8 @@ export const Navbar = () => {
                 Gallery
               </NavLink>
             </li>
-
             {/* Dropdown Menu */}
-            <li className="relative group">
-              <button className="text-white">Explore Rwanda ▼</button>
-              <ul className="absolute left-0 mt-2 bg-blue-700 hidden group-hover:block">
-                <li>
-                  <NavLink
-                    to="/parks"
-                    className="block text-white p-2 hover:bg-blue-500"
-                  >
-                    National Parks
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/culture"
-                    className="block text-white p-2 hover:bg-blue-500"
-                  >
-                    Culture & Heritage
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
-
+            <DropdownMenu />
             <li>
               <NavLink
                 to="/contact"

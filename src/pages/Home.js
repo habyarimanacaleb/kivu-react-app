@@ -11,10 +11,10 @@ const Home = () => {
     <div className="bg-gray-100">
       <section
         id="home"
-        className={`welcome-page ${homeBg.bgImage} min-h-[100vh]`}
+        className={`welcome-page ${homeBg.bgImage} lg:min-h-[100vh]`}
       >
         <div className="hello flex flex-col items-center">
-          <h1 className="lg:text-[90px] md:text-[25px] sm:text-[32px] text-bold py-2 capitalize">
+          <h1 className="lg:text-[90px] md:text-[25px] sm:text-[32px] text-bold py-2 capitalize text-center">
             IBIRWA KIVU BIKE TOURS
           </h1>
           <h4 className="text-bold-500 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
@@ -22,6 +22,7 @@ const Home = () => {
           </h4>
           <p className="home-bind py-1 lg:text-[20px] md:text-[18px] sm:text-[14px] text-center">
             <span className="text-gray-400 italic">Kigali</span>
+            <span className=" px-1 text-gray-200">|</span>
             <span className="text-gray-400 italic">Lake Kivu</span>
             <span className=" px-1 text-gray-200">|</span>
             <span className="text-gray-400 italic">Gisenyi</span>
