@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   return (
-    <nav className="bg-blue-600 p-4">
+    <nav className="bg-blue-600 p-4 fixed">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div
@@ -50,17 +50,7 @@ export const Navbar = () => {
                 isActive ? "text-yellow-400" : "text-white"
               }
             >
-              Services
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "text-white"
-              }
-            >
-              About
+              Gallery
             </NavLink>
           </li>
 

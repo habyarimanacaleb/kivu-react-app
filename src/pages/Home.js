@@ -1,6 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import homeBg from "../assets/css/Home.module.css";
+import { MtbToursCard } from "../components/MtbToursCard";
+import cardsData from "../assets/Servicesdata";
+import { ServiceCard } from "../components/ServiceCard";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,14 +13,15 @@ const Home = () => {
         id="home"
         className={`welcome-page ${homeBg.bgImage} min-h-[100vh]`}
       >
-        <div className="hello text-center">
-          <h1 className="lg:text-[90px] md:text-[25px] sm:text-[32px] text-bold py-2">
-            Ibirwa African Lake Tours
+        <div className="hello flex flex-col items-center">
+          <h1 className="lg:text-[90px] md:text-[25px] sm:text-[32px] text-bold py-2 capitalize">
+            IBIRWA KIVU BIKE TOURS
           </h1>
           <h4 className="text-bold-500 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
             Rental and Tour Services in Rwanda
           </h4>
           <p className="home-bind py-1 lg:text-[20px] md:text-[18px] sm:text-[14px]">
+            <span className="text-gray-400 italic">Kigali</span>
             <span className="text-gray-400 italic">Lake Kivu</span>
             <span className=" px-1 text-gray-200">|</span>
             <span className="text-gray-400 italic">Gisenyi</span>
@@ -67,13 +71,22 @@ const Home = () => {
         <h1 className="headings text-bold-600 text-center text-5xl my-10">
           Our Services/Tours
         </h1>
-        <div className="service-container mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
-          {/* Cards will be dynamically inserted here */}
-          Not yet Available...
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6"
+          id="servicesGrid"
+        >
+          {cardsData.map((service) => (
+            <ServiceCard
+              key={service.id}
+              image={service.image}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
         </div>
       </section>
       <section id="mtb-tours" className="py-10 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto px-6">
           <h2 className="text-3xl font-bold text-blue-600 text-center mb-8">
             Explore Rwanda: 6-Day MTB Adventure Through the Land of a Thousand
             Hills
@@ -89,39 +102,9 @@ const Home = () => {
             shores of Lake Kivu, Rwanda’s diverse beauty provides the perfect
             backdrop for a mountain biking tour.
           </p>
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
-            id="mtbTourCards"
-          >
+          <div className="flex gap-4 flex-wrap" id="mtbTourCards">
             {/* Cards will be dynamically inserted here */}
-            <div className="card">
-              <div className="image">
-                <img src="kivu-image/bg-2.jpg" alt="MTB iMage" />
-              </div>
-              <h1>MTB HEADING 1</h1>
-              <p>Mtb simple content description</p>
-            </div>
-            <div className="card">
-              <div className="image">
-                <img src="kivu-image/bg-2.jpg" alt="MTB iMage" />
-              </div>
-              <h1>MTB HEADING 1</h1>
-              <p>Mtb simple content description</p>
-            </div>
-            <div className="card">
-              <div className="image">
-                <img src="kivu-image/bg-2.jpg" alt="MTB iMage" />
-              </div>
-              <h1>MTB HEADING 1</h1>
-              <p>Mtb simple content description</p>
-            </div>
-            <div className="card">
-              <div className="image">
-                <img src="kivu-image/bg-2.jpg" alt="MTB iMage" />
-              </div>
-              <h1>MTB HEADING 1</h1>
-              <p>Mtb simple content description</p>
-            </div>
+            <MtbToursCard />
           </div>
 
           <div
