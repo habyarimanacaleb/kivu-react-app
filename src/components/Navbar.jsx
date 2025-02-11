@@ -68,7 +68,6 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Add padding to prevent content from being hidden under navbar */}
       <div className="pt-20"></div>
     </>
   );

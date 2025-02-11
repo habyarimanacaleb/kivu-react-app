@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar";
 import Contacts from "./pages/Contacts";
 import MTBAdventure from "./pages/MTBAdventure";
 import { Footer } from "./components/Footer";
+import ServiceDetail from "./components/ServiceDetail";
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/service/:id" element={<ServiceDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/explore-more-to-Rwanda" element={<ExploreRwanda />} />
         <Route path="/parks" element={<h1>National Parks....</h1>} />

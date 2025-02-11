@@ -79,6 +79,7 @@ const Home = () => {
           {cardsData.map((service) => (
             <ServiceCard
               key={service.id}
+              id={service.id}
               image={service.image}
               title={service.title}
               description={service.description}
