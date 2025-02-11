@@ -2,13 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import servicesData from "../assets/Servicesdata";
 import { Navbar } from "../components/Navbar";
-import {
-  FaWhatsapp,
-  FaEnvelope,
-  FaChevronLeft,
-  FaChevronRight,
-  FaChevronDown,
-} from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaChevronDown } from "react-icons/fa";
 
 const ServiceDetail = () => {
   const { id } = useParams();
@@ -17,22 +11,18 @@ const ServiceDetail = () => {
   if (!service) {
     return <div>Service not found</div>;
   }
-
   return (
     <div className="service-detail">
       <Navbar />
       <section className="content py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="initial-content mt-4">
           {" "}
-          {/* Reduced margin-top */}
           <h1 className="heading text-5xl font-bold text-center mx-auto text-blue-800 mb-2">
             {" "}
-            {/* Reduced margin-bottom */}
             {service.title}
           </h1>
           <p className="text-3xl md:text-xl text-gray-700 mt-2 text-center">
             {" "}
-            {/* Reduced margin-top */}
             {service.description}
           </p>
         </div>
@@ -90,29 +80,14 @@ const ServiceDetail = () => {
               </div>
             </div>
           </div>
-          <div className="image-slider relative w-full lg:w-1/3 max-w-lg mx-auto overflow-hidden mt-10 lg:mt-0">
-            <button
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition"
-              id="prev-btn"
-            >
-              <FaChevronLeft />
-            </button>
-            <div
-              className="slider-wrapper flex transition-transform duration-500"
-              id="slider-wrapper"
-            >
+          <div className="image-slider  w-full lg:w-1/3 max-w-lg mx-auto overflow-hidden mt-10 lg:mt-0">
+            <div className=" flex transition-transform duration-500">
               <img
                 src={`../${service.image}`}
                 alt={service.title}
-                className="w-full sm:w-auto rounded-md"
+                className="w-full sm:w-auto rounded-md h-[400px] object-cover"
               />
             </div>
-            <button
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition"
-              id="next-btn"
-            >
-              <FaChevronRight />
-            </button>
           </div>
         </div>
       </section>
