@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import imageData from "../assets/imageData";
 
-const Slideshow = ({ images, interval = 3000 }) => {
+const Slideshow = ({ images = imageData, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -27,9 +28,9 @@ const Slideshow = ({ images, interval = 3000 }) => {
   };
 
   return (
-    <div className="relative w-full max-w-lg mx-auto overflow-hidden">
+    <div className="relative w-full max-w-xl mx-auto overflow-hidden py-3">
       <button
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition z-10"
         onClick={goToPrevious}
       >
         <FaChevronLeft />
@@ -39,25 +40,26 @@ const Slideshow = ({ images, interval = 3000 }) => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            className="w-full"
-          />
+          <div key={index} className="w-full flex-shrink-0">
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-80 object-cover"
+            />
+          </div>
         ))}
       </div>
       <button
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition z-10"
         onClick={goToNext}
       >
         <FaChevronRight />
       </button>
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="flex justify-center mt-4">
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-3 h-3 rounded-full mr-2 ${
               currentIndex === index ? "bg-blue-600" : "bg-gray-300"
             }`}
             onClick={() => goToImage(index)}

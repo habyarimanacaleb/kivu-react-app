@@ -1,5 +1,6 @@
 // src/pages/Services.js
 import React from "react";
+import Slideshow from "../components/Slideshow";
 
 const Services = () => {
   return (
@@ -7,6 +8,9 @@ const Services = () => {
       <h1 className="headings text-bold-600 text-center text-5xl">
         Our Experience
       </h1>
+      <div>
+        <Slideshow />
+      </div>
       <div className="service-container mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Dynamically insert cards */}
       </div>
