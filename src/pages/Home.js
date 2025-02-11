@@ -13,27 +13,27 @@ const Home = () => {
         id="home"
         className={`welcome-page ${homeBg.bgImage} lg:min-h-[100vh]`}
       >
-        <div className="hello flex flex-col items-center">
+        <div className="hello flex flex-col items-center justify-center">
           <h1 className="lg:text-[90px] md:text-[25px] sm:text-[32px] text-bold py-2 capitalize text-center">
             IBIRWA KIVU BIKE TOURS
           </h1>
-          <h4 className="text-bold-500 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
+          <h4 className="text-bold-600 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
             Rental and Tour Services in Rwanda
           </h4>
           <p className="home-bind py-1 lg:text-[20px] md:text-[18px] sm:text-[14px] text-center">
-            <span className="text-gray-400 italic">Kigali</span>
+            <span className="text-gray-600 italic">Kigali</span>
             <span className=" px-1 text-gray-200">|</span>
-            <span className="text-gray-400 italic">Lake Kivu</span>
+            <span className="text-gray-600 italic">Lake Kivu</span>
             <span className=" px-1 text-gray-200">|</span>
-            <span className="text-gray-400 italic">Gisenyi</span>
+            <span className="text-gray-600 italic">Gisenyi</span>
             <span className=" px-1 text-gray-200">|</span>
-            <span className="text-gray-400 italic">Kibuye</span>
+            <span className="text-gray-600 italic">Kibuye</span>
             <span className=" px-1 text-gray-200">|</span>
-            <span className="text-gray-400 italic">Gitesi</span>
+            <span className="text-gray-600 italic">Gitesi</span>
             <span className=" px-1 text-gray-200">|</span>
-            <span className="text-gray-400 italic">Nyakariba Swamp</span>
+            <span className="text-gray-600 italic">Nyakariba Swamp</span>
             <span className=" px-1 text-gray-200">|</span>
-            <span className="text-gray-400 italic">Nkombo Culture</span>
+            <span className="text-gray-600 italic">Nkombo Culture</span>
           </p>
         </div>
         <div className="my-quote text-3xl mt-20">
@@ -88,7 +88,7 @@ const Home = () => {
         </div>
       </section>
       <section id="mtb-tours" className="py-10 bg-gray-100">
-        <div className="mx-auto px-6">
+        <div className="mx-auto px-6 flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold text-blue-600 text-center mb-8">
             Explore Rwanda: 6-Day MTB Adventure Through the Land of a Thousand
             Hills

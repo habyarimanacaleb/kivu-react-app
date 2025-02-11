@@ -13,9 +13,20 @@ export const Navbar = () => {
       <nav className="bg-blue-600 p-4 fixed w-full top-0 left-0 z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
-          <div className="app-logo cursor-pointer" onClick={() => navigate(-1)}>
-            <h1 className="text-white text-xl font-bold">Kivu</h1>
-            <p className="text-white text-sm">safari & tours</p>
+          <div
+            className="app-logo cursor-pointer flex items-center"
+            onClick={() => navigate(-1)}
+          >
+            <img
+              src="/kivu-image/bt-logo-52.jpg"
+              alt="Kivu Logo"
+              className="h-12 w-12 mr-2"
+            />
+            <div>
+              <h1 className="text-white text-xl font-bold">
+                Ibirwa Kivu Bike Tours
+              </h1>
+            </div>
           </div>
 
           {/* Menu Button (Mobile) */}

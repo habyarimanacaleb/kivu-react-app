@@ -1,29 +1,23 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-
 .service-detail {
   padding: 20px;
 }
-
 .service-detail .heading {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
 .service-detail .description {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-
 .service-detail .additional {
   margin-top: 20px;
 }
-
 .service-detail .bookings {
   margin-top: 20px;
 }
-
 .service-detail .image-slider {
   margin-top: 20px;
 }

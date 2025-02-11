@@ -1,6 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  FaEnvelopeOpen,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaChevronUp,
+} from "react-icons/fa";
 
 export const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-blue-500 text-white py-10 relative">
       <div className="container mx-auto px-6">
@@ -12,29 +23,33 @@ export const Footer = () => {
               richness. From scenic tours to unique adventures, we bring you
               unforgettable experiences in Rwanda.
             </p>
-            <a
-              href="#contactus"
-              className="inline-block mt-4 text-blue-400 hover:text-blue-200"
+            <span
+              onClick={() => {
+                navigate("/contact");
+              }}
+              className="inline-block mt-4 text-blue-900 hover:text-blue-200 cursor-pointer"
             >
               Contact Us
-            </a>
+            </span>
           </div>
           <div className="footer-right">
             <h3 className="text-xl font-semibold mb-3">Get in Touch</h3>
             <ul className="text-gray-300 space-y-2 text-sm">
               <li>
-                <i className="fa-solid fa-envelope mr-2"></i>{" "}
+                <FaEnvelopeOpen className="mr-2" />
                 jeandamourrwibutso@gmail.com
               </li>
               <li>
-                <i className="fa-solid fa-phone mr-2"></i> +250784606393
+                <FaPhone className="mr-2" /> +250784606393
               </li>
               <li>
-                <i className="fa-solid fa-location-dot mr-2"></i> Kibuye, Rwanda
+                <FaMapMarkerAlt className="mr-2" /> Kibuye, Rwanda
               </li>
               <li>
                 <a
                   href="https://www.google.com/maps?q=Kibuye,+Rwanda"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-blue-600 hover:underline"
                 >
                   View on Google Maps
@@ -43,13 +58,13 @@ export const Footer = () => {
             </ul>
             <div className="mt-4 flex space-x-4">
               <a href="https://facebook.com" className="hover:text-blue-200">
-                <i className="fa-brands fa-facebook text-xl"></i>
+                <FaFacebook className="text-xl" />
               </a>
               <a href="https://twitter.com" className="hover:text-blue-200">
-                <i className="fa-brands fa-x-twitter text-xl"></i>
+                <FaTwitter className="text-xl" />
               </a>
               <a href="https://instagram.com" className="hover:text-blue-200">
-                <i className="fa-brands fa-instagram text-xl"></i>
+                <FaInstagram className="text-xl" />
               </a>
             </div>
           </div>
@@ -62,7 +77,7 @@ export const Footer = () => {
         id="scrollToTop"
         className="fixed bottom-10 right-6 hidden bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-500 transition"
       >
-        <i className="fa-solid fa-chevron-up"></i>
+        <FaChevronUp />
       </button>
     </footer>
   );
