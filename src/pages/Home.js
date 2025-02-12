@@ -13,7 +13,7 @@ const Home = () => {
         className={`welcome-page ${homeBg.bgImage} lg:min-h-[100vh]`}
       >
         <div className="hello flex flex-col items-center justify-center">
-          <h1 className="lg:text-[90px] md:text-[35px] sm:text-[32px] text-bold py-2 capitalize text-center">
+          <h1 className="lg:text-[90px] md:text-[40px] sm:text-[52px] text-bold py-2 capitalize text-center">
             IBIRWA KIVU BIKE TOURS
           </h1>
           <h4 className="text-bold-600 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
