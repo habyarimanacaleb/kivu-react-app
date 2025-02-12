@@ -3,20 +3,21 @@ import { useNavigate } from "react-router-dom";
 import homeBg from "../assets/css/Home.module.css";
 import cardsData from "../assets/Servicesdata";
 import { ServiceCard } from "../components/ServiceCard";
+import ChevronButton from "../components/ChevronButton";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 mb-4">
       <section
         id="home"
         className={`welcome-page ${homeBg.bgImage} lg:min-h-[100vh]`}
       >
         <div className="hello flex flex-col items-center justify-center">
-          <h1 className="lg:text-[90px] md:text-[40px] sm:text-[52px] text-bold py-2 capitalize text-center">
+          <h1 className="lg:text-[90px] md:text-[60px] sm:text-[40px] text-bold py-2 capitalize text-center">
             IBIRWA KIVU BIKE TOURS
           </h1>
-          <h4 className="text-bold-600 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
+          <h4 className="text-bold-600 lg:text-[45px] md:text-[30px] sm:text-[20px] mt-2">
             Rental and Tour Services in Rwanda
           </h4>
           <p className="home-bind py-1 lg:text-[20px] md:text-[18px] sm:text-[14px] text-center">
@@ -35,7 +36,7 @@ const Home = () => {
             <span className="text-gray-600 italic">Nkombo Culture</span>
           </p>
         </div>
-        <div className="my-quote text-3xl mt-20">
+        <div className="my-quote text-3xl mt-20 pb-10">
           <p className="text-center text-bold capitalize">
             We Travel in Comfort
           </p>
@@ -128,7 +129,7 @@ const Home = () => {
           </p>
           <div className="user-action sm:flex sm:justify-center sm:items-center mt-5">
             <button
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/join")}
               className=" bg-blue-500 contact-us-btn bg-gradient-to-r from-blue-600 to-blue-400 text-white px-6 py-3 mt-5 mx-3 rounded-lg hover:scale-105 hover:from-blue-700 hover:to-blue-500 transition-transform shadow-lg"
               aria-label="Click to connect with our support team"
               title="Stay with us"
@@ -160,11 +161,11 @@ const Home = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             autoSave={true}
-            // width={1200}
             className="map-link w-[100%] h-[100vh]"
           ></iframe>
         </div>
       </section>
+      <ChevronButton />
     </div>
   );
 };

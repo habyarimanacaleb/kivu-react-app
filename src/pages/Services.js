@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section id="service" className="service fade-in">
       <h1 className="headings text-bold-600 text-center text-5xl">
-        Our Experience
+        Our Experience Gallery
       </h1>
       <div>
         <Slideshow />
