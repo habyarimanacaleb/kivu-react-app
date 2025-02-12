@@ -104,11 +104,6 @@ const Home = () => {
             shores of Lake Kivu, Rwanda’s diverse beauty provides the perfect
             backdrop for a mountain biking tour.
           </p>
-          <div className="flex gap-4 flex-wrap" id="mtbTourCards">
-            {/* Cards will be dynamically inserted here */}
-            <MtbToursCard />
-          </div>
-
           <div
             onClick={() => navigate("/explore-more-to-Rwanda")}
             title="Explore Rwanda"

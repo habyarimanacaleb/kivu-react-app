@@ -14,48 +14,48 @@ export const MtbToursCard = () => {
     //   description:
     //     "Paddle through scenic waters and connect with nature on an exciting kayaking experience.",
     // },
-    // {
-    //   id: 3,
-    //   imgSrc: "kivu-image/mtb-image-03.jpg",
-    //   title: "Congo Nile Trail Biking",
-    //   description:
-    //     "Explore breathtaking landscapes on a scenic biking tour along the famous Congo Nile Trail.",
-    // },
-    // {
-    //   id: 4,
-    //   imgSrc: "kivu-image/mtb-image-04.jpg",
-    //   title: "Nyanza Kingdom Palace Tour",
-    //   description:
-    //     "Step back in time and discover Rwanda’s rich royal heritage at the historic Nyanza Kingdom Palace.",
-    // },
-    // {
-    //   id: 5,
-    //   imgSrc: "kivu-image/mtb-image-05.jpg",
-    //   title: "Kigali City Experience",
-    //   description:
-    //     "Immerse yourself in Kigali’s vibrant culture, from modern attractions to historical landmarks.",
-    // },
-    // {
-    //   id: 6,
-    //   imgSrc: "kivu-image/mtb-image-06.jpg",
-    //   title: "Genocide Memorial Tour",
-    //   description:
-    //     "Reflect on Rwanda’s past and its journey of healing at the Genocide Memorial sites.",
-    // },
-    // {
-    //   id: 7,
-    //   imgSrc: "kivu-image/mtb-image-07.jpg",
-    //   title: "Coffee & Tea Plantation Tour",
-    //   description:
-    //     "Witness the production process and sample Rwanda’s finest coffee and tea in the West Province.",
-    // },
-    // {
-    //   id: 8,
-    //   imgSrc: "kivu-image/mountain-bike-1.jpg",
-    //   title: "Mount Karongi Biking Adventure",
-    //   description:
-    //     "Ride through tea and coffee plantations and visit the breathtaking Mubuga Waterfall.",
-    // },
+    {
+      id: 3,
+      imgSrc: "kivu-image/mtb-image-03.jpg",
+      title: "Congo Nile Trail Biking",
+      description:
+        "Explore breathtaking landscapes on a scenic biking tour along the famous Congo Nile Trail.",
+    },
+    {
+      id: 4,
+      imgSrc: "kivu-image/mtb-image-04.jpg",
+      title: "Nyanza Kingdom Palace Tour",
+      description:
+        "Step back in time and discover Rwanda’s rich royal heritage at the historic Nyanza Kingdom Palace.",
+    },
+    {
+      id: 5,
+      imgSrc: "kivu-image/mtb-image-05.jpg",
+      title: "Kigali City Experience",
+      description:
+        "Immerse yourself in Kigali’s vibrant culture, from modern attractions to historical landmarks.",
+    },
+    {
+      id: 6,
+      imgSrc: "kivu-image/mtb-image-06.jpg",
+      title: "Genocide Memorial Tour",
+      description:
+        "Reflect on Rwanda’s past and its journey of healing at the Genocide Memorial sites.",
+    },
+    {
+      id: 7,
+      imgSrc: "kivu-image/mtb-image-07.jpg",
+      title: "Coffee & Tea Plantation Tour",
+      description:
+        "Witness the production process and sample Rwanda’s finest coffee and tea in the West Province.",
+    },
+    {
+      id: 8,
+      imgSrc: "kivu-image/mountain-bike-1.jpg",
+      title: "Mount Karongi Biking Adventure",
+      description:
+        "Ride through tea and coffee plantations and visit the breathtaking Mubuga Waterfall.",
+    },
   ];
 
   return (
