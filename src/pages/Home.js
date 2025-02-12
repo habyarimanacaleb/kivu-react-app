@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import homeBg from "../assets/css/Home.module.css";
-import { MtbToursCard } from "../components/MtbToursCard";
 import cardsData from "../assets/Servicesdata";
 import { ServiceCard } from "../components/ServiceCard";
 
@@ -14,7 +13,7 @@ const Home = () => {
         className={`welcome-page ${homeBg.bgImage} lg:min-h-[100vh]`}
       >
         <div className="hello flex flex-col items-center justify-center">
-          <h1 className="lg:text-[90px] md:text-[25px] sm:text-[32px] text-bold py-2 capitalize text-center">
+          <h1 className="lg:text-[90px] md:text-[35px] sm:text-[32px] text-bold py-2 capitalize text-center">
             IBIRWA KIVU BIKE TOURS
           </h1>
           <h4 className="text-bold-600 lg:text-[45px] md:text-[22px] sm:text-[18px] mt-2">
@@ -93,7 +92,6 @@ const Home = () => {
             Explore Rwanda: 6-Day MTB Adventure Through the Land of a Thousand
             Hills
           </h2>
-
           <p className="text-xl pt-2 pb-6 text-gray-700 text-justify">
             Rwanda, known as the "Land of a Thousand Hills," offers a unique and
             thrilling destination for mountain biking enthusiasts. With its
