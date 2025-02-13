@@ -37,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <div className="about fade-in mx-auto max-w-4xl flex flex-col py-12 px-4 sm:px-6 lg:px-8">
+    <div className="about fade-in mx-auto w-full  lg:max-w-6xl flex flex-col py-10 px-4 ">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -189,27 +189,31 @@ const About = () => {
         </div>
       </motion.div>
 
-      {/* Adding Testimonials Section */}
       <motion.div
         initial="hidden"
         animate="visible"
         variants={fadeInVariants}
         transition={{ duration: 0.5, delay: 1.4 }}
       >
-        <section className="testimonials text-2xl sm:text-xl md:text-2xl text-center py-6 bg-gray-100 rounded-lg shadow-md">
+        <section className="testimonials-container text-2xl sm:text-xl md:text-2xl text-center py-6 bg-gray-100 rounded-lg shadow-md p-2">
           <h2 className="font-bold text-3xl mb-4 text-blue-800">
             What Our Travelers Say
           </h2>
-
-          {/* Display User Testimonials */}
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-item mb-4">
-              <p className="italic mb-2 text-gray-700">"{testimonial.text}"</p>
-              <p className="font-semibold text-gray-800">{testimonial.name}</p>
-            </div>
-          ))}
-
-          {/* Testimonial Submission Form */}
+          <div className="testimonials lg:flex">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="testimonial-item mb-4 container"
+              >
+                <p className="italic mb-2 text-gray-700">
+                  "{testimonial.text}"
+                </p>
+                <p className="font-semibold text-gray-800">
+                  {testimonial.name}
+                </p>
+              </div>
+            ))}
+          </div>
           <h3 className="text-2xl mt-8 mb-4 text-blue-800">
             Submit Your Testimonial
           </h3>
@@ -255,7 +259,7 @@ const About = () => {
           At IBIRWA KIVU BIKE TOURS, we don’t just offer tours—we create
           transformative journeys that connect you with the spirit of Rwanda.
           Ready for the adventure of a lifetime?{" "}
-          <a href="/book-now" className="text-blue-600 hover:underline">
+          <a href="/contact" className="text-blue-600 hover:underline">
             Book your tour today
           </a>{" "}
           and let’s explore together!

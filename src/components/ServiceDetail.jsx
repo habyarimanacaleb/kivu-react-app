@@ -17,23 +17,23 @@ const ServiceDetail = () => {
       <section className="content py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="initial-content mt-4">
           {" "}
-          <h1 className="heading text-5xl font-bold text-center mx-auto text-blue-800 mb-2">
+          <h1 className="heading lg:text-5xl text-2xl font-bold text-center mx-auto text-blue-800 mb-2">
             {" "}
             {service.title}
           </h1>
-          <p className="text-3xl md:text-xl text-gray-700 mt-2 text-center">
+          <p className="text-xl md:text-xl text-gray-700 mt-2 text-center">
             {" "}
             {service.description}
           </p>
         </div>
         <div className="main-content mt-10 flex flex-col lg:flex-row">
           <div className="main-content-left lg:w-2/3 p-6">
-            <h2 className="heading text-4xl font-bold text-center text-blue-800 mb-6">
+            <h2 className="heading text-2xl font-bold text-center text-blue-800 mb-6">
               Services Description
             </h2>
             <p className="text-lg text-gray-700 mb-6">{service.description}</p>
             <div className="additional">
-              <h3 className="text-2xl font-bold text-blue-800 mb-4">
+              <h3 className="text-2xl font-semibold text-blue-800 mb-4">
                 Highlights
               </h3>
               <ul className="list-disc list-inside text-lg text-gray-700 mb-6">
@@ -41,7 +41,7 @@ const ServiceDetail = () => {
                   <li key={index}>{highlight}</li>
                 ))}
               </ul>
-              <h3 className="text-2xl font-bold text-blue-800 mb-4">
+              <h3 className="text-2xl font-semibold text-blue-800 mb-4">
                 Additional Tips
               </h3>
               <ul className="list-disc list-inside text-lg text-gray-700 mb-6">
@@ -51,7 +51,7 @@ const ServiceDetail = () => {
               </ul>
             </div>
             <div className="bookings bg-gray-100 p-6 rounded-lg shadow-md mt-6">
-              <h2 className="text-2xl font-bold mb-4 text-blue-800">
+              <h2 className="text-xl font-semibold mb-4 text-blue-800">
                 Bookings and More Information
               </h2>
               <h4 className="text-xl font-semibold mb-6 flex items-center text-gray-700">
@@ -71,7 +71,7 @@ const ServiceDetail = () => {
                 </a>
                 <a
                   href={`${service.details.contact.email}`}
-                  className="flex items-center gap-3 text-lg font-medium text-blue-600 hover:underline"
+                  className="flex items-center gap-3 text-lg font-medium text-blue-600  over:underline"
                   style={{ textDecoration: "none", marginRight: "20px" }}
                 >
                   <FaEnvelope className="text-2xl" />

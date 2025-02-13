@@ -70,7 +70,8 @@ export const Footer = () => {
           </div>
         </div>
         <div className="mt-10 text-center border-t border-blue-600 pt-4 text-sm text-gray-400">
-          © 2024 Kivu Grafter. All rights reserved.
+          &copy; {new Date().getFullYear()} Ibirwa Kivu Bike. All rights
+          reserved.
         </div>
       </div>
       <button
