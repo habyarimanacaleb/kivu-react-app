@@ -96,8 +96,6 @@ export const Navbar = () => {
           </ul>
         </div>
       </nav>
-
-      <div className="pt-20"></div>
     </>
   );
 };

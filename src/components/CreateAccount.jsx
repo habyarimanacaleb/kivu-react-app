@@ -69,7 +69,7 @@ export const CreateAccount = ({ onSwitchToSignIn }) => {
               htmlFor="fullName"
               className="block text-sm font-medium text-gray-700"
             >
-              Full Name
+              User Name
             </label>
             <input
               type="text"

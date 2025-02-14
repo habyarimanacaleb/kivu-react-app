@@ -1,32 +1,71 @@
 // src/pages/Contacts.js
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Contacts = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [responseMessage, setResponseMessage] = useState("");
+  const [responseClass, setResponseClass] = useState("hidden");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://kivu-back-end.onrender.com/api/contact",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setResponseMessage("Contact information submitted successfully!");
+        setResponseClass("text-green-600 font-bold");
+        setFormData({ name: "", email: "", message: "" });
+        navigate("/");
+      } else {
+        setResponseMessage("Error: " + result.message);
+        setResponseClass("text-red-600 font-bold");
+      }
+    } catch (err) {
+      setResponseMessage("Error: Failed to submit data");
+      setResponseClass("text-red-600 font-bold");
+      console.error("Error:", err);
+    }
+  };
+
   return (
-    <div className="">
-      <div className="p-12">
-        <h1>Welcome to contact page 👋🏻👋🏻</h1>
-        <button
-          onClick={() => navigate("/")}
-          className="p-3 my-3 border rounded-lg bg-blue-300 text-white"
-        >
-          <span className="text-xl">←</span> Home page
-        </button>
-      </div>
-      <section id="contactus" className="contact-us my-8">
-        <h1 className="text-3xl font-bold text-center">Contact Us</h1>
-        <form className="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto mt-6">
+    <div className="bg-gray-100 p-6">
+      <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+        <form id="contactForm" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700 font-bold">
-              Name (optional):
+              Name:
             </label>
             <input
               type="text"
-              id="name"
               name="name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full border border-gray-300 p-2 rounded"
+              required
             />
           </div>
           <div className="mb-4">
@@ -35,8 +74,10 @@ const Contacts = () => {
             </label>
             <input
               type="email"
-              id="email"
               name="email"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full border border-gray-300 p-2 rounded"
               required
             />
@@ -46,8 +87,10 @@ const Contacts = () => {
               Message:
             </label>
             <textarea
-              id="message"
               name="message"
+              id="message"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full border border-gray-300 p-2 rounded"
               required
             ></textarea>
@@ -56,10 +99,13 @@ const Contacts = () => {
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            Send
+            Submit
           </button>
         </form>
-      </section>
+        <p id="responseMessage" className={`mt-4 ${responseClass}`}>
+          {responseMessage}
+        </p>
+      </div>
     </div>
   );
 };
