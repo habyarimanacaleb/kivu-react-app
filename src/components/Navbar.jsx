@@ -8,12 +8,6 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
-
-  // Change language
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng);
-  // };
-
   return (
     <>
       {/* Navbar */}
@@ -96,6 +90,7 @@ export const Navbar = () => {
           </ul>
         </div>
       </nav>
+      <div className="p-10">{}</div>
     </>
   );
 };
