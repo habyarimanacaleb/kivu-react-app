@@ -6,7 +6,6 @@ import ExploreRwanda from "./pages/ExploreRwanda";
 import { Navbar } from "./components/Navbar";
 import { Join } from "./components/Join";
 import Contacts from "./pages/Contacts";
-// import MTBAdventure from "./pages/MTBAdventure";
 import { Footer } from "./components/Footer";
 import ServiceDetail from "./components/ServiceDetail";
 import { SignIn } from "./components/SignIn";
@@ -27,7 +26,6 @@ function App() {
           <Route path="/parks" element={<h1>National Parks....</h1>} />
           <Route path="/culture" element={<h1>Culture & Heritage...</h1>} />
           <Route path="/contact" element={<Contacts />} />
-          {/* <Route path="/mtb-adventures" element={<MTBAdventure />} /> */}
           <Route
             path="*"
             element={

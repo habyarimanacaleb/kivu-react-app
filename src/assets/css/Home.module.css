@@ -5,7 +5,6 @@
   opacity: 0.75;
   background-size: cover;
   background-attachment: fixed;
-  background-origin: border-box;
 }
 .aboutBg {
   background-image: url("../about-bg.jpg");
