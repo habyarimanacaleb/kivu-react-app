@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer";
 import ServiceDetail from "./components/ServiceDetail";
 import { SignIn } from "./components/SignIn";
 import { UserProvider } from "./context/UserContext";
+import ConfirmEmail from "./server/VerifyEmail";
 function App() {
   return (
     <UserProvider>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/parks" element={<h1>National Parks....</h1>} />
           <Route path="/culture" element={<h1>Culture & Heritage...</h1>} />
           <Route path="/contact" element={<Contacts />} />
+          <Route path="/api/confirm-email" element={<ConfirmEmail />} />
           <Route
             path="*"
             element={
